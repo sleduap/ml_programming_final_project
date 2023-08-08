@@ -1,3 +1,3 @@
 # ml_programming_final_project
 
-Example.
+[paper GitHub link](https://github.com/zshicode/Attention-CLX-stock-prediction)https://github.com/zshicode/Attention-CLX-stock-prediction
