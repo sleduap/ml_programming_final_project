@@ -6,7 +6,7 @@ Github Link for the code -> https://github.com/zshicode/Attention-CLX-stock-pred
 Link for the research paper -> https://arxiv.org/pdf/2204.02623.pdf
 
 
-#Summary of paper implementation:
+## Summary of paper implementation:
 
 The stock data undergoes initial preprocessing using an ARIMA(p=2,q=0,d=1) model. Subsequently, the preprocessed stock sequence is fed into either neural networks (NN) or the XGBoost algorithm. This marks the beginning of a pretraining-finetuning framework.
 
