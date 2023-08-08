@@ -1,3 +1,3 @@
-# The link for research paper
+# The link for the research paper
 
-[paper GitHub link](https://github.com/zshicode/Attention-CLX-stock-prediction)https://github.com/zshicode/Attention-CLX-stock-prediction
+Github Link -> https://github.com/zshicode/Attention-CLX-stock-prediction
