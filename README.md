@@ -29,7 +29,7 @@ Following the pre-training phase, a fine-tuning step ensues. This entails the in
 
 The amalgamation of these techniques culminates in a hybrid model named by the author as "AttCLX." Empirical findings indicate the model's superior efficacy and relatively high prediction accuracy. This predictive power offers valuable support to investors and institutions, facilitating well-informed decision-making and the pursuit of enhanced returns while mitigating risks.
 
-##Summary of our contribution:
+## Summary of our contribution:
 
 We have used the Attention-based CNN-LSTM and random forest hybrid model and compared the performance of our model to the performance of paper model (i.e. Attention-based CNN-LSTM and XGBoost hybrid model) by using evaluation metrics such as mean square error (MSE), root mean square error (RMSE), mean absolute error (MAE), and r squared (R2).
 
