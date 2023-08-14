@@ -1,5 +1,17 @@
 # The links for the final project
 
+Requirements
+The code has been tested running under Python 3.7.4, with the following packages and their dependencies installed:
+
+numpy
+sklearn
+statsmodels
+pandas
+tensorflow
+keras
+xgboost
+RandomForest
+
 Github Link for the code -> https://github.com/zshicode/Attention-CLX-stock-prediction
 
 
