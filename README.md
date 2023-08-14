@@ -1,4 +1,4 @@
-# The links for the final project
+#  Attention-based CNN-LSTM and random forest hybrid model for stock prediction
 
 Requirements
 The code has been tested running under Python 3.7.4, with the following packages and their dependencies installed:
@@ -12,7 +12,7 @@ keras
 xgboost
 RandomForest
 ```
-
+# The links for the final project
 Github Link for the code -> https://github.com/zshicode/Attention-CLX-stock-prediction
 
 
