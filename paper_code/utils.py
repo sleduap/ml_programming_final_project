@@ -16,7 +16,7 @@ def adf_test(temp):
     output['value']['Critical Value(1%)'] = t[4]['1%']
     output['value']['Critical Value(5%)'] = t[4]['5%']
     output['value']['Critical Value(10%)'] = t[4]['10%']
-    print(output)
+    # print(output)
 
 def acf_pacf_plot(seq,acf_lags=20,pacf_lags=20):
     fig = plt.figure(figsize=(12, 8))
@@ -28,7 +28,7 @@ def acf_pacf_plot(seq,acf_lags=20,pacf_lags=20):
 
 def order_select_ic(training_data_diff):
     (p, q) = sm.tsa.arma_order_select_ic(training_data_diff, max_ar=6, max_ma=4, ic='bic')['bic_min_order']  # AIC
-    print(p, q)  # 2 0
+    # print(p, q)  # 2 0
 
 def order_select_search(training_set):
     df2 = training_set['close'].diff(1).dropna()
@@ -37,7 +37,7 @@ def order_select_search(training_set):
     pmax = 5
     qmax = 5
     bic_matrix = []
-    print('^', pmax, '^^', qmax)
+    # print('^', pmax, '^^', qmax)
     for p in range(pmax + 1):
         temp3 = []
         for q in range(qmax+1):
@@ -53,7 +53,7 @@ def order_select_search(training_set):
     # print('&&', bic_matrix.stack())
     # print('&&&', bic_matrix.stack().astype('float64'))
     p, q = bic_matrix.stack().astype('float64').idxmin()
-    print('p and q: %s,%s' % (p, q)) 
+    # print('p and q: %s,%s' % (p, q)) 
 
 def create_dataset(dataset, look_back=20):
     dataX, dataY = [], []
@@ -92,7 +92,7 @@ def NormalizeMult(data):
     normalize = np.arange(2*data.shape[1], dtype='float64')
 
     normalize = normalize.reshape(data.shape[1],2)
-    print(normalize.shape)
+    # print(normalize.shape)
     for i in range(0, data.shape[1]):
         list = data[:, i]
         listlow, listhigh = np.percentile(list, [0, 100])
@@ -168,6 +168,6 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
 def prepare_data(series, n_test, n_in, n_out):
     values = series.values
     supervised_data = series_to_supervised(values, n_in, n_out)
-    print('supervised_data', supervised_data)
+    # print('supervised_data', supervised_data)
     train, test = supervised_data.loc[:3499, :], supervised_data.loc[3500:, :]
     return train, test

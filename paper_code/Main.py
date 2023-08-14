@@ -23,16 +23,16 @@ data2 = data1.iloc[3500:, :]
 TIME_STEPS = 20
 
 data, normalize = NormalizeMult(data)
-print('#', normalize)
+# print('#', normalize)
 pollution_data = data[:, 3].reshape(len(data), 1)
 
 train_X, _ = create_dataset(data, TIME_STEPS)
 _, train_Y = create_dataset(pollution_data, TIME_STEPS)
 
-print(train_X.shape, train_Y.shape)
+# print(train_X.shape, train_Y.shape)
 
 m = attention_model(INPUT_DIMS=7)
-m.summary() 
+# m.summary() 
 adam = Adam(learning_rate=0.01)
 m.compile(optimizer=adam, loss='mse') 
 history = m.fit([train_X], train_Y, epochs=50, batch_size=32, validation_split=0.1)

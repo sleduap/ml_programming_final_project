@@ -104,7 +104,7 @@ yuan_X_test, yuan_y_test = data_split(yuan_testing_set_scaled, n_timestamp)
 yuna_X_test = yuan_X_test.reshape(yuan_X_test.shape[0], yuan_X_test.shape[1], 5)
 
 model, yuan_model = lstm(model_type,X_train,yuan_X_train)
-print(model.summary())
+# sprint(model.summary())
 adam = LegacyAdam(learning_rate=0.001)
 model.compile(optimizer=adam,
               loss='mse')

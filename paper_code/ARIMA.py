@@ -70,7 +70,7 @@ df = pd.DataFrame(data2)
 df['trade_date'] = pd.to_datetime(df['trade_date'], format='%Y%m%d')
 
 training_data_diff = df.set_index(['trade_date'], drop=True)
-print('&', training_data_diff)
+# print('&', training_data_diff)
 
 acf_pacf_plot(training_data_diff)
 
@@ -125,7 +125,7 @@ adf_test(temp1)
 
 predictions_ARIMA_diff = pd.Series(model.fittedvalues, copy=True)
 predictions_ARIMA_diff = predictions_ARIMA_diff[3479:]
-print('#', predictions_ARIMA_diff)
+
 plt.figure(figsize=(10, 6))
 plt.plot(training_data_diff, label="diff_1")
 plt.plot(predictions_ARIMA_diff, label="prediction_diff_1")

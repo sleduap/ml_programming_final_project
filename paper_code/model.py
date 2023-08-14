@@ -55,7 +55,7 @@ def attention_model(INPUT_DIMS = 13,TIME_STEPS = 20,lstm_units = 64):
     return model
 
 def PredictWithData(data,data_yuan,name,modelname,INPUT_DIMS = 13,TIME_STEPS = 20):
-    print(data.columns)
+    # print(data.columns)
     yindex = data.columns.get_loc(name)
     data = np.array(data, dtype='float64')
     data, normalize = NormalizeMult(data)
@@ -64,7 +64,7 @@ def PredictWithData(data,data_yuan,name,modelname,INPUT_DIMS = 13,TIME_STEPS = 2
 
     testX, _ = create_dataset(data)
     _, testY = create_dataset(data_y)
-    print("testX Y shape is:", testX.shape, testY.shape)
+    # print("testX Y shape is:", testX.shape, testY.shape)
     if len(testY.shape) == 1:
         testY = testY.reshape(-1, 1)
 
@@ -145,5 +145,5 @@ def walk_forward_validation(train, test):
         yhat = xgboost_forecast(history, testX)
         predictions.append(yhat)
         history.append(test.iloc[i, :])
-        print(i+1, '>expected=%.6f, predicted=%.6f' % (testy, yhat))
+        # print(i+1, '>expected=%.6f, predicted=%.6f' % (testy, yhat))
     return test.iloc[:, -1],predictions

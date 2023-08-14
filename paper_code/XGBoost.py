@@ -35,7 +35,7 @@ def walk_forward_validation(train, test):
         yhat = xgboost_forecast(history, testX)
         predictions.append(yhat)
         history.append(test.iloc[i, :])
-        print(i+1, '>expected=%.6f, predicted=%.6f' % (testy, yhat))
+        # print(i+1, '>expected=%.6f, predicted=%.6f' % (testy, yhat))
     return test.iloc[:, -1],predictions
 
 data = pd.read_csv('./paper_code/601988.SH.csv')
